@@ -43,16 +43,7 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../dist/smooth-scroller.js"></script>
     <script>
-      $('body').on('click', '[data-smoothscroller]', function(e) {
-        e.preventDefault();
-        var href = $(this).attr('href');
-
-        if(href.indexOf('#') === 0) {
-          $(href).smoothScroller({
-            offset: 100
-          });
-        }
-      });
+      $.fn.smoothScroller.defaults.offset = 100;
 
       $('.scrollableElement').on('click', '[data-smoothscroller2]', function(e) {
         e.preventDefault();

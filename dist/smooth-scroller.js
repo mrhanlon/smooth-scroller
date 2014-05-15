@@ -38,4 +38,13 @@
     scrollEl: 'body',
     offset: 0
   };
+
+  $('body').on('click', '[data-smoothscroller]', function(e) {
+    e.preventDefault();
+    var href = $(this).attr('href');
+
+    if(href.indexOf('#') === 0) {
+      $(href).smoothScroller();
+    }
+  });
 }(jQuery));
