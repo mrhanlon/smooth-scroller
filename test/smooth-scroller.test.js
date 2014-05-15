@@ -1,4 +1,4 @@
-SmoothScroller.defaults.speed = 0;
+$.fn.smoothScroller.defaults.speed = 0;
 
 suite('smooth-scroller', function() {
   test('function exists', function() {
