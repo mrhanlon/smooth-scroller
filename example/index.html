@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>smooth-scroller example</title>
+
+    <style>
+    body {
+      margin-top: 70px;
+    }
+    .overlay {
+      position: fixed;
+      height: 50px;
+      background: #dfdfdf;
+      left: 0;
+      right: 0;
+      top: 0;
+      opacity: .5;
+    }
+    .spacer {
+      height: 1000px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="overlay">Some form of fixed header</div>
+    <a href="#bottom" id="top" data-smoothscroller>Scroll to bottom</a>
+    <div class="spacer"></div>
+    <a href="#top" id="bottom" data-smoothscroller>Scroll to top</a>
+    <div class="spacer"></div>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../dist/smooth-scroller.js"></script>
+    <script>
+      $('body').on('click', '[data-smoothscroller]', function(e) {
+        e.preventDefault();
+        var href = $(this).attr('href');
+
+        if(href.indexOf('#') === 0) {
+          $(href).smoothScroller({
+            offset: 100
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
