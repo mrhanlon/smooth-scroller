@@ -1,3 +1,4 @@
+SmoothScroller.defaults.speed = 0;
 
 suite('smooth-scroller', function() {
   test('function exists', function() {
@@ -5,17 +6,13 @@ suite('smooth-scroller', function() {
   });
 
   test('should scroll to element', function() {
-    $('#bottom').smoothScroller({
-      speed: 0
-    });
+    $('#bottom').smoothScroller();
 
     assert.equal($('body').scrollTop(), 1196);
   });
 
   test('should update hash', function() {
-    $('#top').smoothScroller({
-      speed: 0
-    });
+    $('#top').smoothScroller();
 
     assert.equal(document.location.hash, '#top');
   });
@@ -29,18 +26,16 @@ suite('smooth-scroller', function() {
   });
 
   test('should scroll passed element', function() {    
-    $('#scroll1').smoothScroller({
-      speed: 0,
-      scrollEl: '.scrollableElement'
-    });
-
-    assert.equal($('.scrollableElement').scrollTop(), 1836);
-
     $('#scroll2').smoothScroller({
-      speed: 0,
       scrollEl: '.scrollableElement'
     });
 
-    assert.equal($('.scrollableElement').scrollTop(), 1450);
+    assert.equal($('.scrollableElement').scrollTop(), 1018);
+
+    $('#scroll1').smoothScroller({
+      scrollEl: '.scrollableElement'
+    });
+
+    assert.equal($('.scrollableElement').scrollTop(), 0);
   });
 });
