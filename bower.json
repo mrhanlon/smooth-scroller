@@ -1,7 +1,7 @@
 {
   "name": "smooth-scroller",
   "description": "Javascript lib to handle smooth scrolling",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/firstandthird/smooth-scroller",
   "license": "MIT",
   "copyright": "First+Third",

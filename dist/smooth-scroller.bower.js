@@ -1,6 +1,6 @@
 /*!
  * smooth-scroller - Javascript lib to handle smooth scrolling
- * v0.0.1
+ * v0.1.0
  * https://github.com/firstandthird/smooth-scroller
  * copyright First+Third 2014
  * MIT License
