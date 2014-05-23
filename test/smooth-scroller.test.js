@@ -8,7 +8,7 @@ suite('smooth-scroller', function() {
   test('should scroll to element', function() {
     $('#bottom').smoothScroller();
 
-    assert.equal($('body').scrollTop(), 1196);
+    assert.equal($('body').scrollTop(), $('#bottom').offset().top - $('body').offset().top);
   });
 
   test('should update hash', function() {
