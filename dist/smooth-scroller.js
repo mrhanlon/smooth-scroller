@@ -1,6 +1,6 @@
 /*!
  * smooth-scroller - Javascript lib to handle smooth scrolling
- * v0.1.0
+ * v0.1.2
  * https://github.com/firstandthird/smooth-scroller
  * copyright First+Third 2014
  * MIT License
@@ -35,7 +35,7 @@
   $.fn.smoothScroller.defaults = {
     speed: 400,
     ease: 'swing',
-    scrollEl: 'body',
+    scrollEl: 'body,html',
     offset: 0
   };
 

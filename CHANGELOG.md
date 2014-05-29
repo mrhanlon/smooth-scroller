@@ -1,4 +1,11 @@
 
+0.1.2 / 2014-05-29 
+==================
+
+  * added node_modules to gitignore
+  * fixed tests
+  * Add html to scrollEl param to fix FF
+
 0.1.1 / 2014-05-23
 ==================
 
